@@ -20,8 +20,9 @@ class ViewController: NSViewController {
     
     @IBAction func startButton(sender: AnyObject) {
 
-            // add timer
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        // add timer
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+//        timer.fire()
         
         
         
@@ -42,6 +43,7 @@ class ViewController: NSViewController {
     
     @IBAction func cancelButton(sender: AnyObject) {
         audioPlayer.stop()
+        timer.invalidate()
     }
     
 
