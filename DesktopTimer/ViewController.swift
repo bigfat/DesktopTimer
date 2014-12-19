@@ -50,7 +50,8 @@ class ViewController: NSViewController {
         timerFaceTextField.stringValue = currentTime.description
         } else if (timerFaceTextField.integerValue == 0){
             audioPlayer.play()
-            timerFaceTextField.stringValue = ""
+            timerFaceTextField.stringValue = "Done"
+            timer.invalidate()
         }
     }
     
