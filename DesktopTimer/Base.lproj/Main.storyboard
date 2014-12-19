@@ -674,12 +674,10 @@
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQ1-Hj-AeA">
                                 <rect key="frame" x="293" y="120" width="150" height="60"/>
-                                <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="efc-Nn-a7b">
+                                <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="efc-Nn-a7b">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="20" name="HelveticaNeue"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-IA
-</string>
+                                    <modifierMask key="keyEquivalentModifierMask" shift="YES"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="cancelButton:" target="XfG-lQ-9wD" id="m44-Fv-HkW"/>
@@ -713,15 +711,15 @@ DQ
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="cancelButtonOutlet" destination="EQ1-Hj-AeA" id="E7J-42-Zjy"/>
-                        <outlet property="startButtonOutlet" destination="SnX-e7-U4t" id="h8r-qB-F18"/>
+                        <outlet property="cancelButtonOutlet" destination="EQ1-Hj-AeA" id="Zlx-tl-ySR"/>
+                        <outlet property="startButtonOutlet" destination="SnX-e7-U4t" id="Cfx-lK-4nu"/>
                         <outlet property="timerFaceTextField" destination="toT-Iv-ffk" id="x8F-2e-0u9"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="v1e-9b-Oqr"/>
             </objects>
-            <point key="canvasLocation" x="126.5" y="676"/>
+            <point key="canvasLocation" x="75.5" y="704"/>
         </scene>
     </scenes>
 </document>

@@ -27,13 +27,20 @@ class ViewController: NSViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
 //        timer.fire()
         
+        cancelButtonOutlet.enabled = true
+        startButtonOutlet.enabled = false
     }
+    
+    @IBOutlet weak var startButtonOutlet: NSButton!
     
     @IBAction func cancelButton(sender: AnyObject) {
         audioPlayer.stop()
         timer.invalidate()
+        cancelButtonOutlet.enabled = false
+        startButtonOutlet.enabled = true
     }
-    
+
+    @IBOutlet weak var cancelButtonOutlet: NSButton!
 
     func update() {
         if (timerFaceTextField.integerValue != 0) {
@@ -63,7 +70,7 @@ class ViewController: NSViewController {
         audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
         audioPlayer.prepareToPlay() // to play: audioPlayer.play()
         
-        
+        cancelButtonOutlet.enabled = false
 
         
     }
