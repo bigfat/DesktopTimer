@@ -7,13 +7,43 @@
 //
 
 import Cocoa
+import AVFoundation
+
 
 class ViewController: NSViewController {
+    
+
+    var audioPlayer = AVAudioPlayer()
+
+    
+    
+
+    
+    @IBOutlet weak var timerFaceTextField: NSTextField!
+    
+    @IBAction func startButton(sender: AnyObject) {
+
+    }
+    
+    @IBAction func cancelButton(sender: AnyObject) {
+        audioPlayer.stop()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Make an audio player to play the alert noise.
+        
+        // create a dictionary to edit with options of which sound to play for alarm
+        
+        var alarmSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Hey Brother", ofType: "mp3")!)
+        // suggested adding the ! after mp3, maybe an issue
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
+        audioPlayer.prepareToPlay() // to play: audioPlayer.play()
+
+        
     }
 
     override var representedObject: AnyObject? {
