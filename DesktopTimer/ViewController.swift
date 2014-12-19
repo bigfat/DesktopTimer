@@ -14,15 +14,30 @@ class ViewController: NSViewController {
     
 
     var audioPlayer = AVAudioPlayer()
-
+    var timer = NSTimer()
     
-    
-
-    
-    @IBOutlet weak var timerFaceTextField: NSTextField!
+    @IBOutlet internal weak var timerFaceTextField: NSTextField!
     
     @IBAction func startButton(sender: AnyObject) {
 
+            // add timer
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        
+        
+        
+    }
+    
+    // testing stuff
+    func update() {
+        if (timerFaceTextField.integerValue != 0) {
+        var currentTime = timerFaceTextField.integerValue
+        currentTime = --currentTime
+        // update and change what the textfield says
+        timerFaceTextField.stringValue = currentTime.description
+        } else if (timerFaceTextField.integerValue == 0){
+            audioPlayer.play()
+            timerFaceTextField.stringValue = ""
+        }
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
@@ -42,6 +57,8 @@ class ViewController: NSViewController {
         
         audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
         audioPlayer.prepareToPlay() // to play: audioPlayer.play()
+        
+        
 
         
     }

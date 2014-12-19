@@ -696,7 +696,7 @@ Gw
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toT-Iv-ffk">
-                                <rect key="frame" x="152" y="147" width="279" height="108"/>
+                                <rect key="frame" x="152" y="203" width="279" height="89"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="00:00" drawsBackground="YES" allowsEditingTextAttributes="YES" id="YD2-YK-W2d">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="o0a-b7-E2n"/>
                                     <font key="font" size="75" name="Monaco"/>
