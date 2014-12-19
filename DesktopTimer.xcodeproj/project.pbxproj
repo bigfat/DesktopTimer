@@ -13,6 +13,8 @@
 		0152D1FB1A4489CA002219D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0152D1F91A4489CA002219D6 /* Main.storyboard */; };
 		0152D2071A4489CA002219D6 /* DesktopTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0152D2061A4489CA002219D6 /* DesktopTimerTests.swift */; };
 		0152D2111A448C88002219D6 /* Hey Brother.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0152D2101A448C88002219D6 /* Hey Brother.mp3 */; };
+		01E8FBCB1A44BAD9009A5FF4 /* Alarm Clock Digital Buzzer Sound Effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E8FBCA1A44BAD9009A5FF4 /* Alarm Clock Digital Buzzer Sound Effect.mp3 */; };
+		01E8FBCD1A44BBD0009A5FF4 /* Stainless Steel WP.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E8FBCC1A44BBD0009A5FF4 /* Stainless Steel WP.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0152D2051A4489CA002219D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0152D2061A4489CA002219D6 /* DesktopTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopTimerTests.swift; sourceTree = "<group>"; };
 		0152D2101A448C88002219D6 /* Hey Brother.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hey Brother.mp3"; sourceTree = "<group>"; };
+		01E8FBCA1A44BAD9009A5FF4 /* Alarm Clock Digital Buzzer Sound Effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alarm Clock Digital Buzzer Sound Effect.mp3"; sourceTree = "<group>"; };
+		01E8FBCC1A44BBD0009A5FF4 /* Stainless Steel WP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stainless Steel WP.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		0152D1E51A4489CA002219D6 = {
 			isa = PBXGroup;
 			children = (
+				01E8FBCC1A44BBD0009A5FF4 /* Stainless Steel WP.png */,
+				01E8FBCA1A44BAD9009A5FF4 /* Alarm Clock Digital Buzzer Sound Effect.mp3 */,
 				0152D2101A448C88002219D6 /* Hey Brother.mp3 */,
 				0152D1F01A4489CA002219D6 /* DesktopTimer */,
 				0152D2031A4489CA002219D6 /* DesktopTimerTests */,
@@ -192,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E8FBCB1A44BAD9009A5FF4 /* Alarm Clock Digital Buzzer Sound Effect.mp3 in Resources */,
+				01E8FBCD1A44BBD0009A5FF4 /* Stainless Steel WP.png in Resources */,
 				0152D1F81A4489CA002219D6 /* Images.xcassets in Resources */,
 				0152D2111A448C88002219D6 /* Hey Brother.mp3 in Resources */,
 				0152D1FB1A4489CA002219D6 /* Main.storyboard in Resources */,
@@ -401,6 +409,7 @@
 				0152D20C1A4489CA002219D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0152D20D1A4489CA002219D6 /* Build configuration list for PBXNativeTarget "DesktopTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +418,7 @@
 				0152D20F1A4489CA002219D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -650,10 +650,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Timer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="556" y="360" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -672,23 +672,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="583" height="312"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-e7-U4t">
-                                <rect key="frame" x="146" y="67" width="70" height="32"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eHQ-xL-vOJ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="startButton:" target="XfG-lQ-9wD" id="muC-k4-38e"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQ1-Hj-AeA">
-                                <rect key="frame" x="354" y="67" width="83" height="32"/>
-                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="efc-Nn-a7b">
+                                <rect key="frame" x="293" y="120" width="150" height="60"/>
+                                <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="efc-Nn-a7b">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="20" name="HelveticaNeue"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
-Gw
+IA
 </string>
                                 </buttonCell>
                                 <connections>
@@ -696,8 +686,8 @@ Gw
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toT-Iv-ffk">
-                                <rect key="frame" x="152" y="203" width="279" height="89"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" allowsEditingTextAttributes="YES" id="YD2-YK-W2d">
+                                <rect key="frame" x="141" y="203" width="300" height="89"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" userInterfaceLayoutDirection="rightToLeft" alignment="right" placeholderString="" drawsBackground="YES" allowsEditingTextAttributes="YES" id="YD2-YK-W2d">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="o0a-b7-E2n"/>
                                     <font key="font" size="75" name="Monaco"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -707,13 +697,29 @@ Gw
                                     </allowedInputSourceLocales>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-e7-U4t">
+                                <rect key="frame" x="139" y="120" width="150" height="60"/>
+                                <buttonCell key="cell" type="bevel" title="Start" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eHQ-xL-vOJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="20" name="HelveticaNeue"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startButton:" target="XfG-lQ-9wD" id="muC-k4-38e"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="cancelButtonOutlet" destination="EQ1-Hj-AeA" id="E7J-42-Zjy"/>
+                        <outlet property="startButtonOutlet" destination="SnX-e7-U4t" id="h8r-qB-F18"/>
                         <outlet property="timerFaceTextField" destination="toT-Iv-ffk" id="x8F-2e-0u9"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="v1e-9b-Oqr"/>
             </objects>
             <point key="canvasLocation" x="126.5" y="676"/>
         </scene>

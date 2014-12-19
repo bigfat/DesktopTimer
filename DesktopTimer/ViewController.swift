@@ -18,17 +18,23 @@ class ViewController: NSViewController {
     
     @IBOutlet internal weak var timerFaceTextField: NSTextField!
     
+
     @IBAction func startButton(sender: AnyObject) {
+        
+        update()
 
         // add timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
 //        timer.fire()
         
-        
-        
     }
     
-    // testing stuff
+    @IBAction func cancelButton(sender: AnyObject) {
+        audioPlayer.stop()
+        timer.invalidate()
+    }
+    
+
     func update() {
         if (timerFaceTextField.integerValue != 0) {
         var currentTime = timerFaceTextField.integerValue
@@ -41,10 +47,7 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func cancelButton(sender: AnyObject) {
-        audioPlayer.stop()
-        timer.invalidate()
-    }
+    
     
 
     override func viewDidLoad() {
@@ -54,7 +57,7 @@ class ViewController: NSViewController {
         
         // create a dictionary to edit with options of which sound to play for alarm
         
-        var alarmSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Hey Brother", ofType: "mp3")!)
+        var alarmSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Alarm Clock Digital Buzzer Sound Effect", ofType: "mp3")!)
         // suggested adding the ! after mp3, maybe an issue
         
         audioPlayer = AVAudioPlayer(contentsOfURL: alarmSound, error: nil)
