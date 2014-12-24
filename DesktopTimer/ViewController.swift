@@ -9,17 +9,28 @@
 import Cocoa
 import AVFoundation
 
-
 class ViewController: NSViewController {
     
-
+    var minutesLeft = 0
+    var secondsLeft = 0
+    
+    
     var audioPlayer = AVAudioPlayer()
     var timer = NSTimer()
     
-    @IBOutlet internal weak var timerFaceTextField: NSTextField!
+//    var df = NSDateFormatter()
+    var clockFormat = NSNumberFormatter()
     
+    @IBOutlet internal weak var timerFaceTextField: NSTextField!
 
     @IBAction func startButton(sender: AnyObject) {
+        
+        clockFormat.paddingCharacter = ":" //Dunno..
+        
+        var rawNumber = timerFaceTextField.integerValue
+        minutesLeft = rawNumber / 100
+        secondsLeft = rawNumber % 100
+        println("rawNumber = \(rawNumber) minutesLeft = \(minutesLeft) secondsLeft = \(secondsLeft)")
         
         update()
 
@@ -43,20 +54,27 @@ class ViewController: NSViewController {
     @IBOutlet weak var cancelButtonOutlet: NSButton!
 
     func update() {
-        if (timerFaceTextField.integerValue != 0) {
-        var currentTime = timerFaceTextField.integerValue
-        currentTime = --currentTime
-        // update and change what the textfield says
-        timerFaceTextField.stringValue = currentTime.description
+        
+        if (secondsLeft != 0){
+            secondsLeft = --secondsLeft
+            
+            // make a stringValue to show in the clock
+            var stringTimeValue = (minutesLeft.description + ":" + secondsLeft.description)
+            timerFaceTextField.stringValue = stringTimeValue
+        } else if (minutesLeft != 0) {
+            minutesLeft = --minutesLeft
+            
+            secondsLeft = 59
+            
+            // make a stringValue to show in the clock
+            var stringTimeValue = (minutesLeft.description + ":" + secondsLeft.description)
+            timerFaceTextField.stringValue = stringTimeValue
         } else if (timerFaceTextField.integerValue == 0){
             audioPlayer.play()
             timerFaceTextField.stringValue = "Done"
             timer.invalidate()
         }
     }
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +90,6 @@ class ViewController: NSViewController {
         audioPlayer.prepareToPlay() // to play: audioPlayer.play()
         
         cancelButtonOutlet.enabled = false
-
         
     }
 

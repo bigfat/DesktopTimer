@@ -685,7 +685,7 @@
                             </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toT-Iv-ffk">
                                 <rect key="frame" x="141" y="203" width="300" height="89"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" userInterfaceLayoutDirection="rightToLeft" alignment="right" placeholderString="" drawsBackground="YES" allowsEditingTextAttributes="YES" id="YD2-YK-W2d">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" userInterfaceLayoutDirection="rightToLeft" alignment="right" placeholderString="" drawsBackground="YES" allowsEditingTextAttributes="YES" id="YD2-YK-W2d">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="o0a-b7-E2n"/>
                                     <font key="font" size="75" name="Monaco"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
