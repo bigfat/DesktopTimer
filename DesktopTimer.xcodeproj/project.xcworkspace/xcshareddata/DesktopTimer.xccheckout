@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FDB2EE02-4295-475D-B73E-F8200EF1719A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DesktopTimer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>512F2B4A01528A67019DCB6A5EACB72EEF96AF73</key>
+		<string>https://github.com/clonten/DesktopTimer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DesktopTimer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>512F2B4A01528A67019DCB6A5EACB72EEF96AF73</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/clonten/DesktopTimer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>512F2B4A01528A67019DCB6A5EACB72EEF96AF73</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>512F2B4A01528A67019DCB6A5EACB72EEF96AF73</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DesktopTimer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
