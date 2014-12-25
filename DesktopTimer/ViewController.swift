@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: NSViewController {
     
+    var hoursLeft = 0
     var minutesLeft = 0
     var secondsLeft = 0
     
@@ -28,7 +29,8 @@ class ViewController: NSViewController {
         clockFormat.paddingCharacter = ":" //Dunno..
         
         var rawNumber = timerFaceTextField.integerValue
-        minutesLeft = rawNumber / 100
+        hoursLeft = rawNumber / 10000
+        minutesLeft = ((rawNumber - (hoursLeft * 10000)) - secondsLeft) / 100
         secondsLeft = rawNumber % 100
         println("rawNumber = \(rawNumber) minutesLeft = \(minutesLeft) secondsLeft = \(secondsLeft)")
         
@@ -59,7 +61,7 @@ class ViewController: NSViewController {
             secondsLeft = --secondsLeft
             
             // make a stringValue to show in the clock
-            var stringTimeValue = (minutesLeft.description + ":" + secondsLeft.description)
+            var stringTimeValue = (hoursLeft.description + ":" + minutesLeft.description + ":" + secondsLeft.description)
             timerFaceTextField.stringValue = stringTimeValue
         } else if (minutesLeft != 0) {
             minutesLeft = --minutesLeft
@@ -67,7 +69,15 @@ class ViewController: NSViewController {
             secondsLeft = 59
             
             // make a stringValue to show in the clock
-            var stringTimeValue = (minutesLeft.description + ":" + secondsLeft.description)
+            var stringTimeValue = (hoursLeft.description + ":" + minutesLeft.description + ":" + secondsLeft.description)
+            timerFaceTextField.stringValue = stringTimeValue
+        } else if (hoursLeft != 0) {
+            hoursLeft = --hoursLeft
+            
+            minutesLeft = 59
+            
+            // make a stringValue to show in the clock
+            var stringTimeValue = (hoursLeft.description + ":" + minutesLeft.description + ":" + secondsLeft.description)
             timerFaceTextField.stringValue = stringTimeValue
         } else if (timerFaceTextField.integerValue == 0){
             audioPlayer.play()
